@@ -68,7 +68,7 @@ def HSV2BGR(_img, hsv):
 
 
 # Read image
-img = cv2.imread("imori.jpg").astype(np.float32)
+img = cv2.imread("Question_01_10/answers_py/imori.jpg").astype(np.float32)
 
 # RGB > HSV
 hsv = BGR2HSV(img)
@@ -80,7 +80,7 @@ hsv[..., 0] = (hsv[..., 0] + 180) % 360
 out = HSV2BGR(img, hsv)
 
 # Save result
-cv2.imwrite("out.jpg", out)
-cv2.imshow("result", out)
+cv2.imwrite("Question_01_10/answers_py/out.jpg", out)
+cv2.imshow("result", hsv)
 cv2.waitKey(0)
 cv2.destroyAllWindows()

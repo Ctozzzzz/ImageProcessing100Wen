@@ -15,13 +15,13 @@ def BGR2GRAY(img):
 
 
 # Read image
-img = cv2.imread("imori.jpg").astype(np.float)
+img = cv2.imread("Question_01_10/answers_py/imori.jpg").astype(np.float)
 
 # Grayscale
 out = BGR2GRAY(img)
 
 # Save result
-cv2.imwrite("out.jpg", out)
+cv2.imwrite("Question_01_10/answers_py/out.jpg", out)
 cv2.imshow("result", out)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
