@@ -12,6 +12,7 @@ def nn_interpolate(img, ax=1, ay=1):
 
 	y = np.arange(aH).repeat(aW).reshape(aW, -1)
 	x = np.tile(np.arange(aW), (aH, 1))
+	# x = np.arange(aW).repeat(aH).reshape(aH, -1)
 	y = np.round(y / ay).astype(np.int)
 	x = np.round(x / ax).astype(np.int)
 
@@ -23,7 +24,7 @@ def nn_interpolate(img, ax=1, ay=1):
 
 
 # Read image
-img = cv2.imread("imori.jpg").astype(np.float)
+img = cv2.imread("/home/zuochenyu/ImageProcessing100Wen/Question_21_30/imori.jpg").astype(np.float)
 
 # Nearest Neighbor
 out = nn_interpolate(img, ax=1.5, ay=1.5)
